@@ -1,0 +1,411 @@
+/* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+@import url('https://fonts.googleapis.com/css?family=Oswald|Lato:300');
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lato&display=swap');
+
+body {
+   background-color: lightgrey;
+    margin: 3px;
+    color: grey;
+    font-family: "Architects Daughter";}
+
+/*------Mouse Styling-*/
+#contact,
+#start-game,
+#rules-of-game,
+#win-home,
+#back-to-home,
+#home,
+#pause,
+#resume,
+#on,
+#off,
+#voice-on,
+#voice-off,
+.btn-contact {
+    cursor: pointer;}
+
+/*------Title Text Styling-*/
+.game-title {
+    text-align: center;
+    font-weight: normal;
+    font-size: 4rem;
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+    background-color: black;}
+
+.game-area {
+    font-size: 2rem;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;}
+
+/*------Game display-*/
+.game-info-container {
+    background-color: floralwhite;
+    padding-top: 0px;
+    grid-column: 1 / -1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    }
+
+/*------Grid display --*/
+.grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto 2rem auto 2rem auto 2rem auto;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 2.2rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 2.9rem 1rem 2.9rem 1rem;
+    -webkit-perspective: 10rem;
+            perspective: 10rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;}
+
+/*------Overlay Styling-*/
+.overlay-info {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 1;
+    color: azure;
+    overflow-y: scroll;
+    text-align: center;}
+
+#front-page-text{
+    position: relative;
+    top: 100px;
+    padding: 2px;}
+
+.front-email a, h4 {
+    font-size: 1rem;
+    position: relative;
+    top: 105px;}  
+    
+.win-email h4 {
+    font-size: 1rem;
+    position: relative;
+    top: 320px;}  
+    
+.lose-email h4, a {
+    font-size: 1rem;
+    position: relative;
+    top: 540px;
+    text-align: center;}      
+
+h1 {
+    font-size: 600%;
+   position: relative; 
+   -webkit-box-align: center; 
+       -ms-flex-align: center; 
+           align-items: center;}
+
+.overlay-info.visible {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-animation: on-load 100ms forwards;
+            animation: on-load 100ms forwards;}
+
+#rules-of-game {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    top: 30px;}
+
+#what-to-do {
+    position: relative;
+    display: none;
+    text-align: center;
+    font-size: 1.625rem;
+    top: 30px;}
+
+#start-game {
+    
+    text-align: center;
+    font-size: 3rem;
+    position: relative;
+    top: 20px;}
+
+.logo1 {
+    width: 5%;
+    height: auto;
+    position: absolute;
+    left:20px;
+    top:20px;
+    float:left;}
+    
+.ica_logo {
+    width: 10%;
+    height: auto;
+    position: absolute;
+    right:20px;
+    top:20px;}
+
+#game-finished h1 {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+     top: 225px;
+     color: red;}
+
+#game-finished p {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    top: 275px;}
+
+#win h1 {
+    position: relative;
+    text-align: center;
+    font-size: 5rem;
+     top: 150px;
+     color:orange;
+     font-size: 3rem;}
+
+#win P {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+     top: 175px;}
+
+#win-home p {
+    position: relative;
+    text-align: center;
+    font-size: 3rem;
+    top: 200px;}
+
+/*------Card Styling-*/
+.card {
+    position: relative;
+    height: 7.8rem;
+    width: 15rem;
+    background-color: #fff;
+    border: 0.125rem solid #000;
+    border-radius: 0.5rem;}
+
+.fmn-img {
+    position: absolute;
+    height: 8rem;
+    width: 15rem;
+    border-radius: 0.5rem;
+     border: 0.125rem solid #000;}
+
+.card-front {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);}
+
+.card.visible .card-back {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);}
+
+.card.visible .card-front {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transition: -webkit-transform 500ms ease-in-out;
+    transition: -webkit-transform 500ms ease-in-out;
+    -o-transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out;
+    transition: transform 500ms ease-in-out, -webkit-transform 500ms ease-in-out;}
+
+.photo-img {
+    
+ position: absolute;
+    height: 8rem;
+    width: 15rem;
+    border-radius: 0.5rem;
+     border: 0.125rem solid #000;}
+
+.card.matched .card-front {
+    -webkit-animation: match 1500ms forwards;
+            animation: match 1500ms forwards;}
+
+/*------Footer Styling-*/
+.footer-text {
+    text-align: center;
+    color: grey;
+    bottom: 0px;
+    background-color:black;}
+
+
+.card-front {
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);}
+
+.card.visible .card-back {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);}
+
+.card.visible .card-front {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);}
+
+.card.matched .card-front {
+    -webkit-animation: match 1500ms forwards;
+            animation: match 1500ms forwards;}
+
+.btn-contact {
+    font-size: 1.25rem;}
+
+/*------Overlay Animation-*/
+@-webkit-keyframes on-load {
+    from {
+        background-color: rgba(0, 0, 0, 0);   
+    }
+    to {
+        background-color: rgba(0, 0, 0, 1);   
+    }
+}
+@keyframes on-load {
+    from {
+        background-color: rgba(0, 0, 0, 0);   
+    }
+    to {
+        background-color: rgba(0, 0, 0, 1);   
+    }
+}
+
+/*------Game and Info Container Mobile-*/
+@media (max-width: 500px) {
+    .grid-container {
+        -ms-grid-columns: auto;
+        grid-template-columns: repeat(1, auto);
+        
+       
+    }
+    .game-info-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }  
+}
+
+@media (min-width: 501px) {
+    .grid-container {
+        -ms-grid-columns: auto 2.5rem auto;
+        grid-template-columns: repeat(2, auto);
+            
+    }
+    .game-info-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }  
+}
+
+@media (min-width: 900px) {
+    .grid-container {
+        -ms-grid-columns: auto 2.5rem auto 2.5rem auto;
+        grid-template-columns: repeat(2, auto);
+    }
+    .game-info-container {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+}
+
+@media (min-width: 1000px) {
+    .grid-container {
+        -ms-grid-columns: auto 2.5rem auto 2.5rem auto 2.5rem auto;
+        grid-template-columns: repeat(3, auto);
+    }
+    .game-info-container{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+}
+
+@media (min-width: 1300px) {
+    .grid-container {
+        -ms-grid-columns: auto 2.5rem auto 2.5rem auto 2.5rem auto;
+        grid-template-columns: repeat(4, auto);
+    }
+    .game-info-container{
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+}
+
+/*------Audio Toggle Styling-*/
+.audio {
+    text-align: center;
+    font-size: 1.75rem;}
+
+.pause {
+    text-align: center;
+    font-size: 1.75rem;}  
+
+.resume {
+    text-align: center;
+    font-size: 1.75rem;} 
+
+/*------Title-*/
+.f {color: red;}
+.o1 {color: orangered;}
+.r {color: orange;}
+.g {color: pink;}
+.e {color: purple;}
+.t1{color: blue;}
+.y{color: lightblue;}
+.o2{color: aquamarine;}
+.u{color: green;}
+.n{color: yellow;}
+.o3{color: orange;}
+.t2{color: red;}
